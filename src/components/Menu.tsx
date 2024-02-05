@@ -11,7 +11,8 @@ const links = [
   {id: 4, title: "Contact",url: "/"}
 ]
 
-
+// temprary user delete it
+const user = true
 const Menu = () => {
   const [open,setOpen]=useState(false)
   return (
@@ -19,12 +20,13 @@ const Menu = () => {
     <div>
       {!open ? (<Image src="/open.png"  alt="" width={20} height={20} onClick={()=>{setOpen(true)}} />) :
       (<Image src="/close.png"  alt="" width={20} height={20} onClick={()=>{setOpen(false)}} />)}
-<div className='bg-red-500 text-white absolute left-0 top-24 h-[calc(100vh-6rem)]'>
+<div className='bg-red-500 text-white absolute left-0 top-24 h-[calc(100vh-6rem)] flex flex-col z-10 gap-8 w-full items-center justify-center text-3xl  '>
 {links.map(item=>(
   <Link href={item.url} key={item.id}>{item.title}</Link>
 ))}
-
-
+{!user ? <Link href="/login">Login</Link>:
+ <Link href="/orders">Orders</Link>
+}
 
 </div>
     </div>
