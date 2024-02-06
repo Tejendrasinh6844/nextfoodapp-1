@@ -18,7 +18,7 @@ const Navbar = () => {
       <div className='text-xl md:font-bold flex-1 md:text-center'>
         <Link href="/">
           {/* Massimo */}
-          Tejendrasinh
+        Created-by-Tejendrasinh
         </Link>
       </div>
       {/* mobile-menu */}
